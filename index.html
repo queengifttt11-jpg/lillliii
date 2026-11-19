@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>for you boy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =====================================================
+   HAPPY 2ND MONTHSARY
+   PIN CARD SAJA + PAGE TRANSPARAN
+===================================================== */
+
+:root {
+  --pink: #f8c9d9;
+  --pink-dark: #c87599;
+  --pink-light: #fff7fb;
+  --text: #704b5d;
+  --border: #f3c3d5;
+}
+
+/* ================= RESET ================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f6d9e5;
+  font-family: 'Fredoka', sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ================= BACKGROUND ================= */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      rgba(255, 239, 248, .72),
+      rgba(255, 239, 248, .72)
+    ),
+    url("background.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ================= CONTAINER ================= */
+
+/* TIDAK ADA CARD DI SINI */
+.phone {
+  width: 100%;
+  max-width: 360px;
+  min-height: 500px;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 0;
+
+  overflow: hidden;
+  position: relative;
+
+  box-shadow: none;
+}
+
+/* ================= HALAMAN ================= */
+
+.page {
+  display: none;
+
+  width: 100%;
+  min-height: 500px;
+
+  padding: 14px 18px;
+
+  text-align: center;
+  position: relative;
+
+  animation: fade .45s ease;
+}
+
+.page.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* ================= PAGE 1 = CARD PIN ================= */
+
+/* HANYA PAGE PIN YANG ADA CARD */
+#page1 {
+  background: rgba(255, 247, 251, .94);
+
+  border: 3px solid var(--border);
+  border-radius: 28px;
+
+  height: 500px;
+  min-height: 500px;
+
+  box-shadow:
+    0 15px 45px rgba(170, 90, 120, .15);
+}
+
+/* ================= PAGE SELANJUTNYA ================= */
+
+/* PAGE 2-8 TRANSPARAN */
+#page2,
+#page3,
+#page4,
+#page5,
+#page6,
+#page7,
+#page8 {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ================= ANIMASI PAGE ================= */
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= HIASAN BACKGROUND ================= */
+
+.bg {
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+  overflow: hidden;
+
+  opacity: .7;
+}
+
+.bg span {
+  position: absolute;
+
+  color: #f4c5d8;
+  font-size: 24px;
+
+  animation: float 5s ease-in-out infinite;
+}
+
+.bg span:nth-child(1) {
+  top: 8%;
+  left: 8%;
+}
+
+.bg span:nth-child(2) {
+  top: 20%;
+  right: 8%;
+  animation-delay: 1s;
+}
+
+.bg span:nth-child(3) {
+  top: 45%;
+  left: 5%;
+  animation-delay: 2s;
+}
+
+.bg span:nth-child(4) {
+  top: 60%;
+  right: 5%;
+  animation-delay: .5s;
+}
+
+.bg span:nth-child(5) {
+  bottom: 10%;
+  left: 12%;
+  animation-delay: 1.5s;
+}
+
+.bg span:nth-child(6) {
+  bottom: 18%;
+  right: 15%;
+  animation-delay: 2.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(5deg);
+  }
+}
+
+/* ================= TEKS ================= */
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 1.15;
+  color: var(--pink-dark);
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.small {
+  font-size: 13px;
+  opacity: .75;
+}
+
+/* ================= FOTO ================= */
+
+.photo {
+  width: 100%;
+  height: 125px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+  border: 4px solid white;
+
+  box-shadow:
+    0 8px 20px rgba(190, 110, 140, .12);
+
+  margin-bottom: 10px;
+}
+
+.character {
+  width: 150px;
+  height: 150px;
+
+  object-fit: contain;
+
+  margin: 10px auto;
+
+  display: block;
+}
+
+/* ================= BUTTON ================= */
+
+.btn {
+  background: #f8c5d8;
+  color: #9b5d79;
+
+  border: 2px solid #efb3ca;
+  border-radius: 30px;
+
+  padding: 10px 20px;
+
+  font-family: 'Fredoka', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  box-shadow:
+    0 5px 12px rgba(190, 110, 140, .1);
+
+  transition: .2s;
+  margin: 4px;
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: #f4b7ce;
+}
+
+.btn:active {
+  transform: scale(.96);
+}
+
+.btn.white {
+  background: white;
+  border-color: #f3d1df;
+}
+
+/* ================= PASSWORD ================= */
+
+.password-title {
+  margin-top: 2px;
+}
+
+.password-title h1 {
+  font-size: 23px;
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+
+.password-title p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+/* BULATAN PASSWORD */
+
+.pass-display {
+  font-size: 19px;
+  letter-spacing: 6px;
+
+  color: #d07c9e;
+
+  height: 25px;
+
+  margin: 4px 0 12px;
+}
+
+/* KEYPAD */
+
+.keypad {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+
+  max-width: 300px;
+  margin: auto;
+}
+
+.key {
+  height: 43px;
+
+  border-radius: 13px;
+
+  background: #fff;
+  border: 2px solid #f4d5e1;
+
+  color: #9a637b;
+
+  font-family: 'Fredoka', sans-serif;
+  font-size: 18px;
+
+  box-shadow:
+    0 4px 8px rgba(180, 100, 130, .05);
+
+  transition: .15s;
+
+  cursor: pointer;
+}
+
+.key:hover {
+  background: #fff0f6;
+}
+
+.key:active {
+  transform: scale(.94);
+  background: #f8d4e2;
+}
+
+/* HINT */
+
+.hint {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #bd7c99;
+}
+
+/* ================= OPTIONS ================= */
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  gap: 6px;
+
+  margin-top: 14px;
+}
+
+.options .btn {
+  font-size: 13px;
+  padding: 10px 14px;
+}
+
+/* ================= MESSAGE ================= */
+
+.message-box {
+  background: rgba(255, 255, 255, .72);
+
+  border: 2px solid #f4d2df;
+  border-radius: 22px;
+
+  padding: 18px 16px;
+
+  text-align: left;
+
+  box-shadow:
+    0 8px 20px rgba(180, 100, 130, .06);
+
+  margin-top: 12px;
+
+  max-height: 310px;
+  overflow-y: auto;
+}
+
+.message-box p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.message-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ================= LOVE BERTERBANGAN ================= */
+
+.heart {
+  position: fixed;
+
+  bottom: -40px;
+  left: 0;
+
+  font-size: 20px;
+
+  pointer-events: none;
+  z-index: 999;
+
+  animation: loveFloat 5s ease-in forwards;
+
+  filter:
+    drop-shadow(0 3px 5px rgba(220, 120, 160, .15));
+}
+
+@keyframes loveFloat {
+
+  0% {
+    transform:
+      translateY(0)
+      translateX(0)
+      rotate(0deg)
+      scale(.5);
+
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+
+    transform:
+      translateY(-80px)
+      translateX(5px)
+      rotate(-10deg)
+      scale(1);
+  }
+
+  40% {
+    transform:
+      translateY(-280px)
+      translateX(-25px)
+      rotate(15deg)
+      scale(1.1);
+  }
+
+  70% {
+    transform:
+      translateY(-500px)
+      translateX(25px)
+      rotate(-15deg)
+      scale(.9);
+
+    opacity: .9;
+  }
+
+  100% {
+    transform:
+      translateY(-850px)
+      translateX(-10px)
+      rotate(25deg)
+      scale(.7);
+
+    opacity: 0;
+  }
+}
+
+/* ================= MUSIK ================= */
+
+.music-btn {
+  position: fixed;
+
+  bottom: 25px;
+  right: 25px;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: #e89bb9;
+  color: white;
+
+  font-size: 23px;
+
+  z-index: 99;
+
+  box-shadow:
+    0 5px 20px rgba(200, 100, 140, .25);
+
+  display: none;
+  cursor: pointer;
+}
+
+.music-btn.show {
+  display: block;
+}
+
+.music-btn.playing {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 500px) {
+
+  .app {
+    padding: 0;
+  }
+
+  .phone {
+    width: 100%;
+    max-width: 360px;
+    min-height: 500px;
+  }
+
+  /* CARD PIN TETAP PENDEK */
+  #page1 {
+    height: 500px;
+    min-height: 500px;
+    border-radius: 28px;
+  }
+
+  /* PAGE LAIN TANPA CARD */
+  #page2,
+  #page3,
+  #page4,
+  #page5,
+  #page6,
+  #page7,
+  #page8 {
+    min-height: 500px;
+    padding: 14px 18px;
+  }
+
+  .photo {
+    height: 125px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  .message-box {
+    padding: 18px 16px;
+  }
+
+}
+
+/* ================= HP KECIL ================= */
+
+@media (max-width: 380px) {
+
+  .phone {
+    max-width: 340px;
+  }
+
+  #page1 {
+    height: 500px;
+    min-height: 500px;
+  }
+
+  .page {
+    padding: 12px 14px;
+  }
+
+  .photo {
+    height: 115px;
+  }
+
+  .keypad {
+    gap: 7px;
+  }
+
+  .key {
+    height: 40px;
+    font-size: 17px;
+  }
+
+}
+
+#page1 .photo {
+  display: block;
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  margin: 10px auto 12px;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="app">
+<div class="phone">
+
+<!-- BACKGROUND HIASAN -->
+<div class="bg">
+  <span>♡</span>
+  <span>✦</span>
+  <span>♡</span>
+  <span>✧</span>
+  <span>♡</span>
+  <span>✦</span>
+</div>
+
+<!-- ================= PAGE 1 ================= -->
+<!-- SATU-SATUNYA PAGE YANG PAKAI CARD -->
+
+<section class="page active" id="page1">
+<div class="content">
+
+  <div class="password-title">
+    <h1>ayooo ayang tebak<br>passwordnya! 💗</h1>
+    <p>kalau salah, kebangetan jir<br>>:O</p>
+  </div>
+
+  <img src="icon6.webp" class="photo" alt="Foto kita">
+
+  <div class="pass-display" id="passDisplay">♡♡♡♡</div>
+
+  <div class="keypad">
+    <button class="key" onclick="pressKey('1')">1</button>
+    <button class="key" onclick="pressKey('2')">2</button>
+    <button class="key" onclick="pressKey('3')">3</button>
+    <button class="key" onclick="pressKey('4')">4</button>
+    <button class="key" onclick="pressKey('5')">5</button>
+    <button class="key" onclick="pressKey('6')">6</button>
+    <button class="key" onclick="pressKey('7')">7</button>
+    <button class="key" onclick="pressKey('8')">8</button>
+    <button class="key" onclick="pressKey('9')">9</button>
+    <button class="key" onclick="pressKey('0')" style="grid-column:2">0</button>
+  </div>
+
+  <p class="hint">a guide for when we become 'us'</p>
+
+</div>
+</section>
+
+<!-- ================= PAGE 2 ================= -->
+
+<section class="page" id="page2">
+<div class="content">
+
+  <img src="icon1.webp" class="character" alt="Karakter lucu">
+
+  <h1 style="color:#333;">cieee udah bisa<br>dibuka! 💗</h1>
+
+  <button class="btn" onclick="nextPage(3); startMusic();">
+    tap disinii &lt;3
+  </button>
+
+</div>
+</section>
+
+<!-- ================= PAGE 3 ================= -->
+
+<section class="page" id="page3">
+<div class="content">
+
+  <img src="icon2.webp" class="character" alt="Karakter lucu">
+
+  <h2>halo boy, uda siap belum<br>buka isinya?</h2>
+
+  <div class="options">
+    <button class="btn" onclick="nextPage(4)">
+      soOo excited!~&gt;^&lt;
+    </button>
+
+    <button class="btn white" onclick="tease()">
+      no no by, no no
+    </button>
+  </div>
+
+  <p class="small" id="teaseText"></p>
+
+</div>
+</section>
+
+<!-- ================= PAGE 4 ================= -->
+
+<section class="page" id="page4">
+<div class="content">
+
+
+  <img src="icon3.webp" class="character" alt="Karakter lucu">
+
+  <h2>yeayy terimakasih<br>sudah menjawab!!!</h2>
+
+  <p>last one i made something<br>for u sayang, siap yaaa ..</p>
+
+  <button class="btn" onclick="nextPage(5)">
+    oteiii sayanggg
+  </button>
+
+</div>
+</section>
+
+<!-- ================= PAGE 5 ================= -->
+
+<section class="page" id="page5">
+<div class="content">
+
+  
+  <img src="icon4.webp" class="character" alt="Karakter lucu">
+
+  <h1>selamat membaca sayangkuuu</h1>
+
+  <p>i love you, now and always.</p>
+
+  <button class="btn" onclick="nextPage(6)">
+    next surprise ❤️
+  </button>
+
+</div>
+</section>
+
+<!-- ================= PAGE 6 ================= -->
+
+<section class="page" id="page6">
+<div class="content">
+
+  <h1 style="font-family:'Fredoka'; color:#c87599;">
+   i love you sayang!
+  </h1>
+
+  <p style="font-size:16px;">💗 tap play music &lt;3</p>
+
+  <button class="btn" onclick="startMusic();">
+    ♪ ♡ ✦
+  </button>
+
+  <div class="message-box">
+
+ <p>
+        tau gaa sayang? aku selalu punya doa yang sama, entah itu setelah
+        sholat wajib, sholat sunnah, atau di waktu-waktu ketika aku diam
+        dan berbicara sama Allah tentang masa depan.
+      </p>
+
+      <p>
+        “ya Allah, kalau ada kesempatan karir yang lebih baik, jabatan yang
+        lebih tinggi, rezeki yang lebih luas, dan gaji yang lebih besar,
+        tolong berikanlah itu kepada cowokku. mudahkan langkahnya, bukakan
+        pintu-pintu rezeki yang bahkan belum pernah dia bayangkan, dan
+        jadikan setiap usahanya berbuah sesuatu yang baik.
+      </p>
+
+      <p>
+        aku ingin dia tumbuh, berhasil, dan hidup dengan tenang. aku memang
+        perempuan yang ingin mandiri, ingin punya penghasilan sendiri, ingin
+        berkarir dan menjadi seseorang yang bisa dibanggakan. tapi jujur,
+        aku jauh lebih suka kalau kelak suamiku berada di atas aku dalam
+        banyak hal, bukan supaya aku menjadi lebih kecil, melainkan supaya
+        aku punya seseorang yang bisa aku hormati, aku banggakan, dan aku
+        jadikan tempat pulang tanpa kehilangan diriku sendiri.
+      </p>
+
+      <p>
+        aku ingin tetap bekerja, tetap berkembang, tetap punya mimpi, tetapi
+        dengan kehidupan yang tidak membuatku kehilangan waktu untuk keluargaku.
+        aku ingin menjadi istri yang bisa pulang tepat waktu, menyambut
+        suaminya, menemani anak-anaknya tumbuh, menikmati makan malam bersama,
+        dan punya waktu untuk hal-hal kecil yang sering kali justru menjadi
+        kebahagiaan terbesar.
+      </p>
+
+      <p>
+        i don't pray for your success just because i want us to live together
+        sooner. i pray for you because i want to see you become the man you've
+        always dreamed of becoming. i want you to have a life you're proud of,
+        a career that makes you happy, and a heart that never feels tired of trying.
+      </p>
+
+      <p>
+        aku ingin kita cepat dipertemukan dalam kehidupan yang nyata, bukan
+        hanya saling merindukan lewat layar atau chatan. aku ingin suatu hari
+        nanti, semua doa yang pernah aku bisikkan diam-diam berubah menjadi
+        kenyataan.
+      </p>
+
+      <p>
+        aku ingin melihat kamu pulang ke rumah yang sama denganku, menceritakan
+        hari-harimu, lalu kita tertawa tentang hal-hal sederhana.
+      </p>
+
+      <p>
+        and if one day you become someone greater than you are today, please
+        remember that i'll still be the same girl who prayed for you quietly,
+        even before everything came true.
+      </p>
+
+      <p>
+        semoga Allah selalu menjaga kamu, melapangkan rezekimu, meninggikan
+        derajatmu dengan cara yang baik, menjauhkanmu dari hal-hal yang buruk,
+        dan menjadikan aku seseorang yang bisa menemani keberhasilanmu tanpa
+        menjadi beban dalam perjalananmu.
+      </p>
+
+      <p>
+        aku tidak hanya ingin menjadi perempuan yang kamu cintai hari ini.
+        aku ingin menjadi seseorang yang tetap kamu pilih ketika hidupmu sudah
+        jauh lebih baik, ketika tanggung jawabmu semakin besar, dan ketika
+        dunia mulai mengenal namamu.
+      </p>
+
+      <p>
+        because my dream isn't just to marry you. my dream is to build a
+        peaceful life with you, to grow beside you, to see you succeed,
+        and to love you in every season of your life.
+      </p>
+
+      <p>
+        semoga kelak kita tidak hanya menjadi dua orang yang berhasil meraih
+        mimpi masing-masing, tetapi juga dua orang yang berhasil menjaga
+        rumah tangga, menjaga hati, dan menjaga cinta yang Allah titipkan
+        di antara kita.
+      </p>
+
+      <p>
+        and ya Allah, jangan biarkan dia merasa sendirian dalam mengejar apa
+        yang dia cita-citakan. ketika langkahnya terasa berat, kuatkan hatinya.
+        ketika dia merasa tertinggal dari orang lain, ingatkan bahwa setiap
+        orang punya waktunya masing-masing.
+      </p>
+
+      <p>
+        ketika dia gagal, jangan biarkan kegagalan itu membuatnya meragukan
+        dirinya sendiri. dan ketika dia berhasil, semoga keberhasilan itu
+        tidak menjauhkan dia dari-Mu, tidak mengubah hatinya, dan tidak membuat
+        dia lupa bagaimana dia memulai semuanya.
+      </p>
+
+      <p>
+        i hope you give him more than just success. give him peace, good health,
+        a sincere heart, and people who genuinely love him. let him win without
+        losing himself, let him grow without becoming cold, and let him have
+        everything he deserves without having to sacrifice his happiness.
+      </p>
+
+      <p>
+        kalau memang aku adalah perempuan yang akan menemani seluruh perjalanan
+        hidupnya, izinkan aku menjadi tempat paling tenang untuknya. bukan
+        seseorang yang menambah beban pikirannya, melainkan seseorang yang bisa
+        dia datangi ketika dunia terasa terlalu berat.
+      </p>
+
+      <p>
+        aku ingin menjadi rumah baginya, sebagaimana aku juga berharap dia
+        menjadi rumah untukku. aku tidak ingin hanya menikmati hasil dari kerja
+        kerasmu, aku juga ingin menemani prosesnya.
+      </p>
+
+      <p>
+        saat kamu belum punya apa-apa, saat kamu sedang membangun semuanya
+        dari awal, saat kamu lelah, saat kamu ragu, bahkan saat jalan kita
+        belum semudah yang kita bayangkan.
+      </p>
+
+      <p>
+        aku ingin kita saling menguatkan, bukan saling menuntut untuk selalu
+        baik-baik saja.
+      </p>
+
+      <p>
+        an ya Allah, izinkan dia membahagiakan orangtuanya dengan hasil dari
+        kerja kerasnya sendiri. izinkan dia melihat senyum dan kebanggaan di
+        wajah orangtuanya, mendengar mereka berkata bahwa mereka bangga
+        memiliki anak seperti dirinya.
+      </p>
+
+      <p>
+        cukupkan rezekinya agar dia bisa membalas kebaikan orangtuanya,
+        memberikan kehidupan yang lebih nyaman, dan membuat mereka merasakan
+        bahwa segala pengorbanan yang pernah dilakukan tidak sia-sia.
+      </p>
+
+      <p>
+        aku ingin dia punya waktu untuk membahagiakan orangtuanya, mencapai
+        apa yang dia impikan, membangun masa depannya, dan mempersiapkan
+        dirinya dengan baik.
+      </p>
+
+      <p>
+        jangan biarkan dia terburu-buru mengambil tanggung jawab besar hanya
+        karena ingin segera bersamaku. aku ingin ketika kelak dia memilih
+        menjadi seorang suami, dia melangkah dengan hati yang siap, bukan
+        dengan perasaan terpaksa atau terbebani.
+      </p>
+
+      <p>
+        aku ingin dia merasa bahwa dia sudah cukup siap untuk memulai kehidupan
+        baru, tanpa harus merasa meninggalkan tanggung jawab dan kebahagiaan
+        orangtuanya.
+      </p>
+
+      <p>
+        i don't want you to rush into becoming a husband just because you want
+        to be with me. i want you to fulfill your dreams, make your parents
+        proud, and become the man you wish to be.
+      </p>
+
+      <p>
+        and when the time comes for us, i hope you'll come to me with a peaceful
+        heart, knowing that you've done your best for yourself and for the people
+        you love.
+      </p>
+
+      <p>
+        and when the time comes for us to finally live under the same roof,
+        i hope we won't forget all the nights we spent praying for this moment.
+      </p>
+
+      <p>
+        i hope we still appreciate the simplest things, a meal together,
+        your hand in mine, your voice after a long day, and the feeling of
+        finally having nowhere else to go because we have each other.
+      </p>
+
+      <p>
+        aku ingin suatu hari nanti, ketika kita sudah tua dan rambut kita mulai
+        memutih, aku bisa melihat kamu dan berkata,
+        <i>“ternyata laki-laki yang dulu selalu aku sebut dalam doaku benar-benar
+        menjadi teman hidupku.”</i>
+      </p>
+
+      <p>
+        semoga bukan hanya aku yang beruntung mendapatkanmu, tetapi kamu juga
+        selalu merasa beruntung mendapatkan aku.
+      </p>
+
+      <p>
+        semoga kita menjadi pasangan yang tidak hanya saling mencintai,
+        tetapi juga saling menghargai, saling menjaga, saling mengusahakan,
+        dan selalu memilih pulang kepada satu sama lain.
+      </p>
+
+      <p>
+        i don't need a perfect life with you. i just want a life where,
+        no matter how difficult things get, we never stop being a team...
+      </p>
+
+
+  </div>
+
+  <button class="btn" onclick="nextPage(7)">
+    next surprise 💗
+  </button>
+
+</div>
+</section>
+
+<!-- ================= PAGE 7 ================= -->
+
+<section class="page" id="page7">
+<div class="content">
+
+
+  <img src="icon5.webp" class="character" alt="Karakter lucu">
+
+  <h1>i will always love you, sayangku💗</h1>
+
+  <p>
+    semoga kita selalu punya alasan<br>
+    buat tetap memilih satu sama lain.
+  </p>
+
+  <p>
+    makasih ya udah jadi bagian<br>
+    paling hangat di hidup aku.
+  </p>
+
+  <button class="btn" onclick="nextPage(8)">
+    last one ♡
+  </button>
+
+</div>
+</section>
+
+<!-- ================= PAGE 8 ================= -->
+
+<section class="page" id="page8">
+<div class="content">
+
+
+  <img src="icon7.webp" class="character" alt="Karakter lucu">
+
+  <h1>i love you,<br>now and always.</h1>
+
+  <p>
+   jangan lupa senyum seterusnya yah sayang
+  </p>
+
+  <p style="font-size:18px;">
+  aku akan selalu mencintaimu
+  </p>
+
+  <button class="btn" onclick="location.reload()">
+    replay ♡
+  </button>
+
+</div>
+</section>
+
+</div>
+</div>
+
+<!-- ================= MUSIK ================= -->
+
+<audio id="music" loop>
+  <source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">♪</button>
+
+<script>
+let currentPage = 1;
+let password = "";
+
+/* GANTI PASSWORD DI SINI */
+const correctPassword = "1408";
+
+const music = document.getElementById("music");
+const musicBtn = document.getElementById("musicBtn");
+
+/* ================= PINDAH HALAMAN ================= */
+
+function nextPage(page) {
+  document.querySelectorAll(".page").forEach(p => {
+    p.classList.remove("active");
+  });
+
+  document.getElementById("page" + page).classList.add("active");
+  currentPage = page;
+
+  if (page > 1) {
+    musicBtn.classList.add("show");
+  }
+
+  window.scrollTo(0, 0);
+
+  if (page === 2 || page === 4 || page === 5 || page === 7 || page === 8) {
+    createHearts();
+  }
+}
+
+/* ================= PASSWORD ================= */
+
+function pressKey(num) {
+  if (password.length >= 4) return;
+
+  password += num;
+
+  document.getElementById("passDisplay").textContent =
+    "●".repeat(password.length) +
+    "♡".repeat(4 - password.length);
+
+  if (password.length === 4) {
+    setTimeout(() => {
+      if (password === correctPassword) {
+        nextPage(2);
+        createHearts();
+      } else {
+        alert("salahh ayang 😭 coba lagi yaa!");
+        password = "";
+        document.getElementById("passDisplay").textContent = "♡♡♡♡";
+      }
+    }, 300);
+  }
+}
+
+/* ================= MUSIK ================= */
+
+function startMusic() {
+  music.play().then(() => {
+    musicBtn.classList.add("playing");
+  }).catch(() => {
+    console.log("Autoplay diblokir browser.");
+  });
+}
+
+function toggleMusic() {
+  if (music.paused) {
+    startMusic();
+  } else {
+    music.pause();
+    musicBtn.classList.remove("playing");
+  }
+}
+
+/* Coba nyalakan musik otomatis saat halaman dibuka */
+window.addEventListener("load", () => {
+  music.volume = 0.7;
+  startMusic();
+});
+
+/* Jika autoplay diblokir, musik menyala setelah pengguna menyentuh halaman */
+document.addEventListener("click", () => {
+  if (music.paused) {
+    startMusic();
+  }
+}, { once: true });
+
+document.addEventListener("touchstart", () => {
+  if (music.paused) {
+    startMusic();
+  }
+}, { once: true });
+
+/* ================= TOMBOL ISENG ================= */
+
+function tease() {
+  document.getElementById("teaseText").textContent =
+    "ish, iseng mulu 😤 tap yang excited sekarang jugaa!";
+}
+
+/* ================= LOVE BERTERBANGAN ================= */
+
+function createHearts() {
+  const hearts = ["💗", "♥︎", "♡", "♡"];
+
+  for (let i = 0; i < 18; i++) {
+    setTimeout(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+
+      heart.textContent =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+      heart.style.left = (Math.random() * 100) + "vw";
+
+      heart.style.fontSize =
+        (14 + Math.random() * 16) + "px";
+
+      heart.style.animationDuration =
+        (4 + Math.random() * 3) + "s";
+
+      heart.style.animationDelay =
+        (Math.random() * .5) + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 8000);
+
+    }, i * 180);
+  }
+}
+
+/* LOVE MUNCUL LAGI SETIAP BEBERAPA DETIK */
+
+setInterval(() => {
+  if (currentPage > 1) {
+    createHearts();
+  }
+}, 9000);
+</script>
+
+</body>
+</html>
